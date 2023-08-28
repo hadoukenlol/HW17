@@ -10,8 +10,10 @@ namespace HW17.Profiles
     internal class StandartType : IProfile
     {
 
-        public void CalculateInterest(Account account)
+        public void CalculateInterest()
         {
+            Console.WriteLine("Реализация стандартного счёта");
+            Account account = new Account();
             account.Interest = account.Balance * 0.4;
             if (account.Balance < 1000)
                 account.Interest -= account.Balance * 0.2;

@@ -6,9 +6,14 @@ namespace HW17
     {
         static void Main(string[] args)
         {
-            Account profile1 = new Account();
-            profile1.Balance = 50;
-            profile1.AccountType(new SalaryType());
+            var profile1 = new Viewer();
+
+            profile1.ViewMethod(new SalaryType());
+
+            Console.WriteLine();
+
+            var profile2 = new Viewer();
+            profile2.ViewMethod(new StandartType());
         }
     }
 }
